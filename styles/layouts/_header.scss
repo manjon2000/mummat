@@ -2,4 +2,72 @@
 @use "../settings/keyframes" as keyframes;
 @use "../utils/mixins" as mixins;
 
-.header {}
+.header {
+  width: 90%;
+  max-width: 1200px;
+  min-height: calc(56px + 8px);
+  margin: 0 auto;
+  position: sticky;
+  top: 20px;
+  padding: 1.5rem;
+
+  &__capa {
+    width: calc(100% + 7px);
+    height: calc(100% + 8px);
+    background-color: rgb(127, 82, 34);
+    border-radius: 50px;
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-height: calc(56px + 8px);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #313131;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__rrss {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & em {
+      font-size: 1.5rem;
+    }
+  }
+}
